@@ -1,6 +1,7 @@
 package sample;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
@@ -11,6 +12,16 @@ public class Controller {
     TextField yearField = new TextField();
     @FXML
     Label result = new Label();
+    @FXML
+    Button button = new Button();
+    @FXML
+    public void onMouseEnter(){
+        button.setOpacity(1);
+    }
+    @FXML
+    public void onMouseExit(){
+        button.setOpacity(0.8);
+    }
 
     @FXML
     public void printCalender(){
@@ -103,7 +114,7 @@ public class Controller {
         String monthName = getMonthName(month);
         String r = monthName + "   "+ year;
         r+= "\n********************";
-        r+= "\n Fri Sat Sun Mon Tue Wed Thu";
+        r+= "\n Fri  Sat  Sun  Mon  Tue  Wed  Thu";
         result.setText(r);
     }
 
