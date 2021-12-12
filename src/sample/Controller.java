@@ -5,6 +5,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
+import java.text.ParseException;
+
 public class Controller {
     @FXML
     TextField monthField = new TextField();
@@ -14,6 +16,13 @@ public class Controller {
     Label result = new Label();
     @FXML
     Button button = new Button();
+    @FXML
+    Button exitButton = new Button();
+
+    @FXML
+    public void exitAction(){
+        System.exit(0);
+    }
     @FXML
     public void onMouseEnter(){
         button.setOpacity(1);
@@ -27,11 +36,20 @@ public class Controller {
     public void printCalender(){
         try {
             int month = Integer.parseInt(monthField.getText());
+            if(month<1 || month >12)
+                throw new Exception("Please, Enter A Valid month");
+
             int year = Integer.parseInt(yearField.getText());
+            if(year < 1500)
+                throw  new Exception("Unfortunately, we don't support these ages");
             printMonth(month,year);
 
-        }catch (Exception e){
+        }catch (ParseException e){
             result.setText("Please, Enter A Valid Values");
+
+        }
+        catch (Exception e){
+            result.setText(e.getMessage());
         }
 
     }

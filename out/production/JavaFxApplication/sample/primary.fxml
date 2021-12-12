@@ -21,5 +21,10 @@
          <font>
             <Font name="Britannic Bold" size="18.0" />
          </font></Label>
+      <Button fx:id="exitButton" contentDisplay="CENTER" layoutX="464.0" layoutY="321.0" mnemonicParsing="false" onAction="#exitAction" onMouseEntered="#onMouseEnter" onMouseExited="#onMouseExit" opacity="0.85" prefHeight="37.0" prefWidth="106.0" style="-fx-background-color: mediumturquoise; -fx-border-color: snow;" text="Exit" textFill="WHITE">
+         <font>
+            <Font name="Agency FB Bold" size="28.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
