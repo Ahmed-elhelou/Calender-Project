@@ -17,9 +17,14 @@
             <Font name="System Bold" size="12.0" />
          </font></TextField>
       <TextField fx:id="yearField" alignment="CENTER" layoutX="194.0" layoutY="56.0" prefHeight="63.0" prefWidth="122.0" promptText="Year" style="-fx-background-color: snow; -fx-border-color: snow; -fx-border-width: 5; -fx-font-size: 25; -fx-font-weight: bold;" />
-      <Label fx:id="result" layoutX="85.0" layoutY="130.0" prefHeight="219.0" prefWidth="350.0" text=" March 2012&#10;-----------------------------&#10;Sun Mon Tue Wed Thu Fri Sat&#10;                                                      1 2 3&#10; 4 5 6 7 8 9 10&#10; 11 12 13 14 15 16 17&#10; 18 19 20 21 22 23 24&#10; 25 26 27 28 29 30" textAlignment="JUSTIFY">
+      <Label fx:id="result" layoutX="85.0" layoutY="130.0" prefHeight="219.0" prefWidth="350.0" text="Welcome To My Calender Project,&#10;&#10;Ahmad Mazen Elhleou&#10;&#10;120190203" textAlignment="JUSTIFY">
          <font>
             <Font name="Britannic Bold" size="18.0" />
          </font></Label>
+      <Button fx:id="exitButton" contentDisplay="CENTER" layoutX="464.0" layoutY="321.0" mnemonicParsing="false" onAction="#exitAction" onMouseEntered="#onMouseEnter" onMouseExited="#onMouseExit" opacity="0.85" prefHeight="37.0" prefWidth="106.0" style="-fx-background-color: mediumturquoise; -fx-border-color: snow;" text="Exit" textFill="WHITE">
+         <font>
+            <Font name="Agency FB Bold" size="28.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
